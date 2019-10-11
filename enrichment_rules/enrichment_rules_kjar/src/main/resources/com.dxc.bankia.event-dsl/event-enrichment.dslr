@@ -1,0 +1,27 @@
+package com.dxc.bankia.event;
+
+import java.util.Date;
+import com.dxc.bankia.model.Vehicle;
+import com.dxc.bankia.model.Event;
+import com.dxc.bankia.services.FinderService;
+
+rule "Enrich REQUEST_ITV_COMPLIANCE event"
+avoid looping
+when
+    There is an Event
+        - with type REQUEST_CAR_ITV_COMPLIANCE
+        - with registrationNumber set
+then
+    Enrich with Vehicle data
+end
+
+rule "Enrich REQUEST_DRIVER_ITV_COMPLIANCE event"
+avoid looping
+when
+    There is an Event
+        - with type REQUEST_DRIVER_ITV_COMPLIANCE
+        - with identificationNumber set
+then
+    Enrich with Driver data
+end
+
