@@ -1,0 +1,11 @@
+/spark_rules/spark_rules_kjar/target/
+/spark_rules/spark_rules_test/target/
+/model/target/
+/shared/target/
+/services/services.iml
+/enrichment_rules/enrichment_rules_test/target/
+/enrichment_rules/enrichment_rules_kjar/target/
+/post_filter_rules/post_filter_rules_test/target/
+/post_filter_rules/post_filter_rules_kjar/target/
+/spark_rules/spark_rules_test/target/
+/spark_rules/spark_rules_kjar/target/
