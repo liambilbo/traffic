@@ -1,0 +1,23 @@
+template header
+minAge
+maxAge
+country
+category
+duration
+
+package com.dxc.bankia.itv;
+
+import java.util.Date;
+import com.dxc.bankia.model.Vehicle;
+import function com.dxc.bankia.model.functions.DateUtils.addYears;
+
+template "itv-rules"
+
+rule "Calculate Next Itv Vehicles_@{row.rowNumber}"
+when
+    $c: Vehicle(age >= @{minAge}, age <= @{maxAge}, country == Country.@{country}, category == Vehicle.Category.@{category}, nextItvDate == null)
+then
+    modify ($c){ setNextItvDate(addYears($c.getBaseDateToCalculateNextItvDate(),@{duration}))};
+end
+
+end template

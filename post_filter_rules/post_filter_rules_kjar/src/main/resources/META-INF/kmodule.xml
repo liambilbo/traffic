@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://jboss.org/kie/6.0.0/kmodule">
+    <kbase name="itvPeriodKBase" packages="com.dxc.bankia.itv-template">
+        <ruleTemplate
+            dtable="com.dxc.bankia.itv-template/itv-period-data.xls"
+            template="com.dxc.bankia.itv-template/itv-period.drt"
+            row="3" col="2"/>
+        <ksession name="itvPeriodKSession"/>
+    </kbase>
+</kmodule>
